@@ -1,0 +1,40 @@
+<div class="main-container">
+    <div class="title">Weather App</div>
+    <div class="inner-container">
+        <form class="search-box">
+            <input type="text" class="search" name="search" placeholder="Enter location" value="{{cityName}}" [(ngModel)]="cityName" />    
+            <input class="search-btn" type="submit" value="Search" (click)="loadData()"/>
+        </form>
+        <div class="weather-info" *ngIf="search === true && notfound===false">
+            <img [src]="data.imageURL" alt="wimg">
+            <div class="temperature">{{data.temp}} °C</div>
+            <div class="description">{{data.description | titlecase}}</div>
+        </div>
+        <div class="additional-info" *ngIf="search === true && notfound===false">
+            <p>
+                <span>Feels like:</span>
+                <span>{{data.feelsLike}}</span>
+            </p>
+            <p>
+                <span>Pressure:</span>
+                <span>{{data.pressure}}</span>
+            </p>
+            <p>
+                <span>Humidity:</span>
+                <span>{{data.humidity}}</span>
+            </p>
+            <p>
+                <span>City:</span>
+                <span>{{data.city}}</span>
+            </p>
+        </div>
+        <div class="img-container" *ngIf="search === false">
+            <img src="/assets/images/conifer-weather-forecast.png" alt="welc">
+        </div>
+        <div class="notfound-container" *ngIf="notfound===true">
+            <div class="notfound-title">City not Found</div>
+            <img src="/assets/images/NotFoundGIF.gif" alt="Not Found">
+        </div>
+    </div>
+    
+</div>

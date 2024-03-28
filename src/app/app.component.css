@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
+.main-container{
+    background-color: whitesmoke;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.main-container .title{
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 1rem;
+    padding: 1rem;
+}
+.main-container .inner-container{
+    /* border: 2px solid rebeccapurple; */
+    width: 30%;
+    height: 60%;
+    background-image: linear-gradient(to right, rgb(251, 239, 138),rgb(255, 207, 104));
+    border-radius: 8px;
+}
+.main-container .inner-container .search-box{
+    display: flex;
+    justify-content: center;
+    margin: 6px;
+}
+.main-container .inner-container .search{
+    height: 2rem;
+    width: 15rem;
+    border: none;
+    outline: none;
+    padding: 5px;
+    margin:5px;
+}
+.main-container .inner-container .search-btn{
+    height: 2rem;
+    width: 3.5rem;
+    padding: 5px;
+    margin:5px;
+    background-color: rgb(255, 136, 0);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.main-container .inner-container .weather-info{
+    text-align: center;
+    font-size: 1.4rem;
+}
+.main-container .inner-container .weather-info .temperature{
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+.main-container .inner-container .additional-info{
+    margin-top: 1.5rem;
+    margin-left: 1rem;
+    padding: 5px;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+}
+.main-container .inner-container .additional-info p{
+    padding: 6px;
+    display: flex;
+    justify-content: space-between;
+}
+.main-container .inner-container .additional-info p span{
+    padding: 0px 5px;
+}
+.main-container .inner-container .img-container, .notfound-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20rem;
+}
+.main-container .inner-container .img-container img, .notfound-container img{
+    width: 15rem;
+    height: 15rem;
+}
+.main-container .inner-container .notfound-container .notfound-title{
+    font-size: 2.5rem;
+    font-family: "Protest Revolution", sans-serif;
+}
